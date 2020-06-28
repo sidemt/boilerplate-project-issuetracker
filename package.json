@@ -4,7 +4,10 @@
 	"description": "What am I about?",
 	"main": "server.js",
 	"scripts": {
-		"start": "node server.js"
+		"start": "node server.js",
+		"test": "mocha -u tdd tests",
+    "dev": "nodemon server.js",
+    "fix": "eslint routes\\api.js --fix"
 	},
 	"dependencies": {
 		"express": "^4.14.0",
@@ -15,7 +18,8 @@
 		"chai-http": "^3.0.0",
 		"mocha": "^3.2.0",
 		"zombie": "^5.0.5",
-		"helmet": "^3.1.0"
+		"helmet": "^3.1.0",
+		"dotenv": "8.2.0"
 	},
 	"engines": {
 		"node": "4.4.3"
@@ -29,5 +33,10 @@
 		"hyperdev",
 		"express"
 	],
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"eslint": "^7.3.1",
+		"eslint-config-google": "^0.14.0",
+		"nodemon": "^2.0.4"
+	}
 }
